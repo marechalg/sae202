@@ -16,6 +16,7 @@ for i in range(int(dim)):
     B.append(int(input("Y : ")))
 
     print("bite")
+    print("bite")
 
 if dim == 1:
     c.Manhattan(A, B, col)
