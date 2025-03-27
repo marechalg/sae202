@@ -2,16 +2,11 @@ from math import *
 letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
 class Calculs(object):
-    def Minkowski(self, A, B, col = {}):
+    def Minkowski(self, A, B, p = 3):
         res = 0
-        if len(A) == 1:
-            res = self.Manhattan(A, B)
-        elif len(A) == 2:
-            res = self.Euclidienne(A, B)
-        else:
-            for i in range(len(A)):
-                res += ((abs(A[i] - B[i])) ** len(A)) ** (1 / len(A))
-        return res
+        for i in range(len(A)):
+            res += (abs(A[i] - B[i]) ** p)
+        return res ** (1 / p)
 
     def Manhattan(self, A, B, col = {}):
         res = 0
@@ -34,8 +29,8 @@ class Calculs(object):
         for i in range(len(A)):
             calc = abs(A[i] - B[i])
             col[i + 1] = calc
-            if calc >= max:
-                max = calc
+            if calc > max:
+                max = calc 
         return max
     
     def regression(self, col, k):

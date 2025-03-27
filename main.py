@@ -2,14 +2,14 @@ import Calculs as calc
 
 sep = "--------------------"
 
-c = calc.Calculs()
+c = calc.Calculs()                                  
 
 A = []
 B = []
 col = {}
 
 print(sep)
-typ = input("Régression ou Classification [R / C] : ")
+typ = input("Régression ou Classification [R / C] : ").upper()
 dim = int(input("\nDimension [1 - 26] : "))
 for i in range(int(dim)):
     A.append(int(input("X : ")))
@@ -22,7 +22,6 @@ elif dim == 2:
 else:
     c.Chebyshev(A, B, col)
 
-nb = int(input("\nCombien de termes à afficher : "))
 for val in col:
     print(val, ": ", col[val])
 if typ == 'R':
