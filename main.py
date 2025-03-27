@@ -22,6 +22,7 @@ elif dim == 2:
 else:
     c.Chebyshev(A, B, col)
 
+print(col)
 c.toGraphe(col)
 
 for val in col:
