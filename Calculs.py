@@ -67,9 +67,9 @@ class Calculs(object):
     
 
     def toGraphe(self, col = {}):
-        np.array(col)
-
         plt.figure('Evolution de la collection')
+
+        np.array(col)
 
         plt.clf()
         plt.plot(col)
