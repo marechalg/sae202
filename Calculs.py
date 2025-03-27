@@ -82,7 +82,6 @@ class Calculs(object):
         return res
     
     def tri(self, col = {}):
-<<<<<<< HEAD
         trie = sorted(col.values())
         return trie
     
@@ -106,12 +105,7 @@ class Calculs(object):
             new_centroids = np.array([cluster.mean(axis=0) if len(cluster) > 0 else centroids[i] for i, cluster in enumerate(clusters)])
             centroids = new_centroids  
 
-
         plt.scatter(col[:, 0], col[:, 1], c='gray', label='Données')
         plt.scatter(centroids[:, 0], centroids[:, 1], c='red', marker='x', label='Centroïdes finaux')
         plt.legend()
         plt.show()
-=======
-        col = dict(sorted(col.items(), key=lambda item: item[1]))
-        return col
->>>>>>> f18ce0d817413a926a0ec73fd0ae8d6f173b777f
