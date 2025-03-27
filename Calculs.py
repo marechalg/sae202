@@ -1,6 +1,11 @@
 from math import *
-import matplotlib as plt
+<<<<<<< HEAD
 import numpy as np
+=======
+from matplotlib import pylab as plt
+from sklearn.preprocessing import MinMaxScaler
+
+>>>>>>> 1f0582fc2f303039174fc46362b731a9e1ae3be7
 
 letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
@@ -77,3 +82,14 @@ class Calculs(object):
         plt.xlabel(r'$\gamma_c$')
 
         plt.savefig('mafig.pdf')
+
+    def normaliser(val):
+        scaler = MinMaxScaler()
+        res = scaler.fit_transform(val)
+        return res
+    
+    def tri(col):
+        trie = sorted(col.values())
+        return trie
+
+    # skibidi dopamine
