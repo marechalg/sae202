@@ -2,6 +2,7 @@ from math import *
 from matplotlib import pylab as plt
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
+from sklearn.cluster import KMeans
 
 
 letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
@@ -83,3 +84,29 @@ class Calculs(object):
     def tri(self, col = {}):
         trie = sorted(col.values())
         return trie
+    
+    def kMeans(self, col = {}):
+        k = 2  
+        max_iters = 10  
+
+        np.random.seed(42)
+        centroids = col[np.random.choice(len(col), k, replace=False)]
+
+
+        for iteration in range(max_iters):
+            clusters = [[] for _ in range(k)]
+            for point in col:
+                distances = [np.linalg.norm(point - centroid) for centroid in centroids]
+                closest_cluster = np.argmin(distances)
+                clusters[closest_cluster].append(point)
+            clusters = [np.array(cluster) for cluster in clusters]
+            for i, cluster in enumerate(clusters):
+                print(f"Cluster {i}: {cluster.tolist()}")
+            new_centroids = np.array([cluster.mean(axis=0) if len(cluster) > 0 else centroids[i] for i, cluster in enumerate(clusters)])
+            centroids = new_centroids  
+
+
+        plt.scatter(col[:, 0], col[:, 1], c='gray', label='Données')
+        plt.scatter(centroids[:, 0], centroids[:, 1], c='red', marker='x', label='Centroïdes finaux')
+        plt.legend()
+        plt.show()
