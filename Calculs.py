@@ -67,21 +67,20 @@ class Calculs(object):
     
 
     def toGraphe(self, col = {}):
-        plt.figure('Distances')
+        plt.figure('Distances entre A et B')
         col = np.array(list(col.items()))
         plt.clf()
         plt.plot(col)
-        plt.yscale('log')
-        plt.ylabel('Classement')
-        plt.xlabel(r'$\Distances$')
-        plt.savefig('graphe.pdf')
+        plt.ylabel('Distance')
+        plt.xlabel(r'$\gamma_c$')
+        plt.savefig('mafig.pdf')
 
-    def normaliser(val):
+    def normaliser(self, val):
         scaler = MinMaxScaler()
         res = scaler.fit_transform(val)
         return res
     
-    def tri(col):
+    def tri(self, col = {}):
         trie = sorted(col.values())
         return trie
 
