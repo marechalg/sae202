@@ -113,7 +113,7 @@ class Calculs(object):
             centroids = new_centroids  
 
         col = np.array(col)
-        plt.scatter(col[:, 0], col[:, 1], c='gray', label='Données')
+        plt.scatter(col[:], col[:], c='gray', label='Données')
         plt.scatter(centroids[:, 0], centroids[:, 1], c='red', marker='x', label='Centroïdes finaux')
         plt.legend()
         plt.show()
