@@ -82,3 +82,5 @@ class Calculs(object):
     def tri(col):
         trie = sorted(col.values())
         return trie
+
+    # skibidi dopamine
