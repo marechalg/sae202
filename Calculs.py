@@ -95,8 +95,10 @@ class Calculs(object):
         max_iters = 10  
 
         np.random.seed(42)
-        centroids = col[np.random.choice(len(col), k)]
 
+        col_array = np.array(list(col.values()))
+
+        centroids = col_array[np.random.choice(len(col_array), k, replace=False)]
 
         for iteration in range(max_iters):
             clusters = [[] for _ in range(k)]
