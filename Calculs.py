@@ -112,6 +112,7 @@ class Calculs(object):
             new_centroids = np.array([cluster.mean(axis=0) if len(cluster) > 0 else centroids[i] for i, cluster in enumerate(clusters)])
             centroids = new_centroids  
 
+        col = np.array(col)
         plt.scatter(col[:, 0], col[:, 1], c='gray', label='Données')
         plt.scatter(centroids[:, 0], centroids[:, 1], c='red', marker='x', label='Centroïdes finaux')
         plt.legend()
