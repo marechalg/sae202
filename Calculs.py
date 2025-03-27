@@ -1,11 +1,8 @@
 from math import *
-<<<<<<< HEAD
-import numpy as np
-=======
 from matplotlib import pylab as plt
+import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 
->>>>>>> 1f0582fc2f303039174fc46362b731a9e1ae3be7
 
 letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
