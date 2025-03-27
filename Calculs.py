@@ -82,8 +82,13 @@ class Calculs(object):
         return res
     
     def tri(self, col = {}):
-        trie = sorted(col.values())
-        return trie
+        for i in range(len(col)):
+            for j in range(len(col)):
+                if col[j + 1] < col[i + 1]:
+                    temp = col[i + 1]
+                    col[j + 1] = col[i + 1]
+                    col[i + 1] = temp
+        return col
     
     def kMeans(self, col = {}):
         k = 2  
