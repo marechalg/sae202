@@ -59,3 +59,7 @@ class Calculs(object):
                 leMaxi = copycol1[i]
 
         return leMaxi
+
+        def tri(col):
+            trie = sorted(col.values())
+            return trie
