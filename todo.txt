@@ -6,8 +6,8 @@ X - input de regression ou classification
 X - regression : retourner la moyenne
 X - classification : retourner la valeur la plus courante
 X - représenter sur un graphique
-X normalisation des données ^
-X questions du fichier Knn_SAE.ipynb
+X - normalisation des données ^
+X - questions du fichier Knn_SAE.ipynb
 - test algorithme d'aprentissage automatique (le rapport au sujet est là tkt)
 -----Kmeans-----
 - j'ai pas lu le sujet encor
