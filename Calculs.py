@@ -90,7 +90,7 @@ class Calculs(object):
         max_iters = 10  
 
         np.random.seed(42)
-        centroids = col[np.random.choice(len(col), k, replace=False)]
+        centroids = col[np.random.choice(len(col), k)]
 
 
         for iteration in range(max_iters):
