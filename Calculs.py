@@ -79,3 +79,6 @@ class Calculs(object):
         res = scaler.fit_transform(val)
         return res
     
+    def tri(col):
+        trie = sorted(col.values())
+        return trie
