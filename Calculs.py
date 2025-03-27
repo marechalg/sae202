@@ -1,5 +1,6 @@
 from math import *
 from matplotlib import pylab as plt
+import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 
 
@@ -65,17 +66,20 @@ class Calculs(object):
         return leMaxi
     
 
-    def toGraphe(col):
-        plt.figure('Evolution de la collection') # création ou sélection d'une figure. La figure est nommée, ce qui est plus explicite qu'une numérotation
-        plt.clf() # on efface la figure courante
+    def toGraphe(self, col = {}):
+        plt.figure('Distances entre A et B')
+        col = np.array(list(col.items()))
+        plt.clf()
         plt.plot(col)
-        plt.yscale('log')
-        plt.ylabel('collection')
-        plt.xlabel(r'$\gamma_c$') # pas de caractères spéciaux, donc on a le droit de mettre des antislash pour les commandes LaTeX
+        plt.ylabel('Distance')
+        plt.xlabel(r'$\gamma_c$')
         plt.savefig('mafig.pdf')
 
-    def normaliser(val):
+    def normaliser(self, val):
         scaler = MinMaxScaler()
         res = scaler.fit_transform(val)
         return res
     
+    def tri(self, col = {}):
+        trie = sorted(col.values())
+        return trie
