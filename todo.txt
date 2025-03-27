@@ -6,10 +6,6 @@ X - input de regression ou classification
 X - regression : retourner la moyenne
 X - classification : retourner la valeur la plus courante
 - représenter sur un graphique
-    ////
-    On pourra, dans un premier temps, pour tester utiliser comme données d'apprentissage des points de $\mathbb{N}^2$ étiquettés par des lettres de l'alphabet (on pourra se limiter un petit nombre pour les tests, et même les représenter graphiquement).  
-    ////
-
 - normalisation des données ^
 - questions du fichier Knn_SAE.ipynb
 - test algorithme d'aprentissage automatique (le rapport au sujet est là tkt)

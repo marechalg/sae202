@@ -61,6 +61,7 @@ class Calculs(object):
                 leMaxi = copycol1[i]
 
         return leMaxi
+<<<<<<< HEAD
     
 
     def toGraphe():
@@ -71,3 +72,9 @@ class Calculs(object):
         plt.ylabel('b')
         plt.xlabel(r'$\gamma_c$') # pas de caractères spéciaux, donc on a le droit de mettre des antislash pour les commandes LaTeX
         plt.savefig('mafig.pdf')
+=======
+
+        def tri(col):
+            trie = sorted(col.values())
+            return trie
+>>>>>>> c6d2434f58c86c3fbdda376ab33eee45b3c20f35
