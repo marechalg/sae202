@@ -1,12 +1,12 @@
 ------KNN------
 X - collection des distances
-- trier la collection croissant
+X - trier la collection croissant
 X - input de k qui choisit les k premiers termes de la collection
 X - input de regression ou classification
 X - regression : retourner la moyenne
 X - classification : retourner la valeur la plus courante
 X - représenter sur un graphique
-- normalisation des données ^
+X normalisation des données ^
 - questions du fichier Knn_SAE.ipynb
 - test algorithme d'aprentissage automatique (le rapport au sujet est là tkt)
 -----Kmeans-----

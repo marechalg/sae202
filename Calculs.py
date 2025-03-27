@@ -1,5 +1,7 @@
 from math import *
 from matplotlib import pylab as plt
+from sklearn.preprocessing import MinMaxScaler
+
 
 letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
@@ -71,3 +73,9 @@ class Calculs(object):
         plt.ylabel('collection')
         plt.xlabel(r'$\gamma_c$') # pas de caractères spéciaux, donc on a le droit de mettre des antislash pour les commandes LaTeX
         plt.savefig('mafig.pdf')
+
+    def normaliser(val):
+        scaler = MinMaxScaler()
+        res = scaler.fit_transform(val)
+        return res
+    
