@@ -10,4 +10,4 @@ X normalisation des données ^
 X questions du fichier Knn_SAE.ipynb
 - test algorithme d'aprentissage automatique (le rapport au sujet est là tkt)
 -----Kmeans-----
-- j'ai pas lu le sujet encore
+- 
