@@ -33,4 +33,7 @@ if typ == 'R':
     print("\nMoyenne :", c.regression(col, dim))
 else:
     print("\nPlus courant :", c.classification(col, dim))
+
+
+c.kMeans(col)
     
