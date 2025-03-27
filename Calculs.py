@@ -81,5 +81,5 @@ class Calculs(object):
         return res
     
     def tri(self, col = {}):
-        trie = sorted(col.values())
-        return trie
+        col = dict(sorted(col.items(), key=lambda item: item[1]))
+        return col
