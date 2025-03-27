@@ -22,6 +22,8 @@ elif dim == 2:
 else:
     c.Chebyshev(A, B, col)
 
+c.toGraphe(col)
+
 for val in col:
     print(val, ": ", col[val])
 if typ == 'R':
