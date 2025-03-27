@@ -67,20 +67,14 @@ class Calculs(object):
     
 
     def toGraphe(self, col = {}):
-        plt.figure('Evolution de la collection')
-
+        plt.figure('Distances')
         col = np.array(list(col.items()))
-
-        print(col)
-
         plt.clf()
         plt.plot(col)
         plt.yscale('log')
-        
-        plt.ylabel('collection')
-        plt.xlabel(r'$\gamma_c$')
-
-        plt.savefig('mafig.pdf')
+        plt.ylabel('Classement')
+        plt.xlabel(r'$\Distances$')
+        plt.savefig('graphe.pdf')
 
     def normaliser(val):
         scaler = MinMaxScaler()
