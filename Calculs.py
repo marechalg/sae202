@@ -1,5 +1,5 @@
 from math import *
-from matplotlib import pylab as plt
+from matplotlib import pylab as plt # type: ignore
 
 letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
@@ -63,11 +63,11 @@ class Calculs(object):
         return leMaxi
     
 
-    def toGraphe():
+    def toGraphe(col):
         plt.figure('Evolution de la collection') # création ou sélection d'une figure. La figure est nommée, ce qui est plus explicite qu'une numérotation
         plt.clf() # on efface la figure courante
-        plt.plot(b)
+        plt.plot(col)
         plt.yscale('log')
-        plt.ylabel('b')
+        plt.ylabel('collection')
         plt.xlabel(r'$\gamma_c$') # pas de caractères spéciaux, donc on a le droit de mettre des antislash pour les commandes LaTeX
         plt.savefig('mafig.pdf')
