@@ -82,10 +82,9 @@ class Calculs(object):
         return res
     
     def tri(self, col = {}):
-        sorte = []
-        while bool(col):
-            mini = max(col)
-            print(col)
-            print(mini)
-        
+        temp = sorted(col.values())
+        for i in range(1, len(col) + 1):
+            del col[i]
+        for j in range(1, len(temp) + 1):
+            col[j] = temp[j - 1]
         return col
