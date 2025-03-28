@@ -95,7 +95,9 @@ class Calculs(object):
                     col[i] = temp
         return col
     
-    def kMeans(self, ):
+    
+    
+    def kMeans(self, x, y):
         # On choisira dans un premier temps $k$ au hasard et on se donne un jeu de données (une matrice où chaque ligne représente une donnée).
 
         for 
@@ -106,15 +108,6 @@ class Calculs(object):
 
 
 
-<<<<<<< HEAD
         #Ensuite, Choisir aléatoirement $k$ points,  ces points sont les centres des clusters (appelés aussi centroïd), puis on répète :  
         #1. Affecter chaque point (ligne de  la matrice de données) au groupe dont il est le plus proche (de son centre).  
         #2. Recalculer le centre de chaque cluster et modifier le centroide. On prendra simplement la moyenne des points du cluster.
-=======
-        col = np.array(col)
-        plt.scatter(col[0], col[1], c='gray', label='Données')
-        plt.scatter(centroids[:, 0], centroids[:, 1], c='red', marker='x', label='Centroïdes finaux')
-        plt.legend()
-        plt.show()
-
->>>>>>> ccd39948d1adb57f1c950abcc32ac34ba8608cf0
