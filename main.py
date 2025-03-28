@@ -21,9 +21,7 @@ elif dim == 2:
 else:
     c.Chebyshev(A, B, col)
 
-print(col)
 col = c.tri(col)
-print(col)
 c.toGraphe(col)
 
 typ = input("Régression ou Classification [R / C] : ").upper()

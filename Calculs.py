@@ -47,26 +47,23 @@ class Calculs(object):
         return res / k
 
     def classification(self, col, k):
-        copycol1 = {}
-        copycol2 = {}
+        occurrences = {}
+    
+    # Commencer à 1 et aller jusqu'à k (inclusif)
+        for i in range(1, k + 1):  # On commence à 1 et on inclut k
+            if col[i - 1] in occurrences:  # Accéder à l'élément correspondant (index 0)
+                occurrences[col[i - 1]] += 1
+            else:
+                occurrences[col[i - 1]] = 1
 
-        for i in range(1, k):
-            copycol1[i] = col[i]
-            copycol2[i] = 0
-
-        for i in copycol1[i]:
-            for j in copycol1[i]:
-                if i == j:
-                    copycol2[i] += 1
-
+        leMaxi = None
         maxi = 0
-        for i in copycol2:
-            if i > maxi:
-                maxi = i
-                leMaxi = copycol1[i]
+        for key, value in occurrences.items():
+            if value > maxi:
+                maxi = value
+                leMaxi = key
 
         return leMaxi
-    
 
     def toGraphe(self, col = {}):
         plt.figure('Distances entre A et B')
