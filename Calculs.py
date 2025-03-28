@@ -89,3 +89,10 @@ class Calculs(object):
             print(mini)
         
         return col
+    
+      def listeToMatr(self, x, y):
+        matr = []
+        for i in range(len(x)):
+            matr.append([x[i], y[i]])
+        return matr
+    
