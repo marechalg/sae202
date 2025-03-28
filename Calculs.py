@@ -1,8 +1,8 @@
 from math import *
 from matplotlib import pylab as plt
 import numpy as np
-# from sklearn.preprocessing import MinMaxScaler
-# from sklearn.cluster import KMeans
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.cluster import KMeans
 
 letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
@@ -83,6 +83,8 @@ class Calculs(object):
     def tri(self, col = {}):
         for i in range(1, len(col)):
             for j in range(1, len(col)):
+        for i in range(len(col)):
+            for j in range(len(col)):
                 if col[j] < col[i]:
                     temp = col[i + 1]
                     col[j] = col[i]
@@ -112,9 +114,8 @@ class Calculs(object):
             centroids = new_centroids  
 
         col = np.array(col)
-        plt.scatter(col[:], col[:], c='gray', label='Données')
+        plt.scatter(col[0], col[1], c='gray', label='Données')
         plt.scatter(centroids[:, 0], centroids[:, 1], c='red', marker='x', label='Centroïdes finaux')
         plt.legend()
         plt.show()
 
-#    test très sérieux
