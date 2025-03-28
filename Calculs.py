@@ -83,7 +83,7 @@ class Calculs(object):
     def tri(self, col = {}):
         for i in range(len(col)):
             for j in range(len(col)):
-                if col[j + 1] < col[i + 1]:
+                if col[j] < col[i]:
                     temp = col[i + 1]
                     col[j + 1] = col[i + 1]
                     col[i + 1] = temp
@@ -117,4 +117,3 @@ class Calculs(object):
         plt.legend()
         plt.show()
 
-#    test très sérieux
