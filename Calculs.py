@@ -1,8 +1,19 @@
 from math import *
 from matplotlib import pylab as plt
 import numpy as np
+<<<<<<< HEAD
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.cluster import KMeans
+=======
+<<<<<<< HEAD
+import random
+# from sklearn.preprocessing import MinMaxScaler
+# from sklearn.cluster import KMeans
+=======
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.cluster import KMeans
+>>>>>>> ccd39948d1adb57f1c950abcc32ac34ba8608cf0
+>>>>>>> 12490a65a3db1f486fc6a83c106e6e180b570fb3
 
 letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
@@ -81,42 +92,33 @@ class Calculs(object):
         return res
     
     def tri(self, col = {}):
+<<<<<<< HEAD
         for i in range(1,len(col)):
             for j in range(1,len(col)):
+=======
+        for i in range(1, len(col)):
+            for j in range(1, len(col)):
+>>>>>>> 12490a65a3db1f486fc6a83c106e6e180b570fb3
                 if col[j] < col[i]:
                     temp = col[i]
                     col[j] = col[i]
                     col[i] = temp
         return col
     
-    def kMeans(self, col = {}):
-        k = 2  
-        max_iters = 10  
+    
+    
+    def kMeans(self, x, y):
+        # On choisira dans un premier temps $k$ au hasard et on se donne un jeu de données (une matrice où chaque ligne représente une donnée).
 
-        np.random.seed(42)
+        for 
 
-        col_array = np.array(list(col.values()))
+        miniPts = 
+        maxiPts = 
+        k = random.randint(miniPts, maxiPts)
 
-        centroids = col_array[np.random.choice(len(col_array), k, replace=False)]
 
-        for iteration in range(max_iters):
-            clusters = [[] for _ in range(k)]
-            for point in col:
-                distances = [np.linalg.norm(point - centroid) for centroid in centroids]
-                closest_cluster = np.argmin(distances)
-                clusters[closest_cluster].append(point)
-            clusters = [np.array(cluster) for cluster in clusters]
-            for i, cluster in enumerate(clusters):
-                print(f"Cluster {i}: {cluster.tolist()}")
-            new_centroids = np.array([cluster.mean(axis=0) if len(cluster) > 0 else centroids[i] for i, cluster in enumerate(clusters)])
-            centroids = new_centroids  
 
-        col = np.array(col)
-        plt.scatter(col[0], col[1], c='gray', label='Données')
-        plt.scatter(centroids[:, 0], centroids[:, 1], c='red', marker='x', label='Centroïdes finaux')
-        plt.legend()
-        plt.show()
-
+<<<<<<< HEAD
 
     def listeToMatr(self, x, y):
         matr = []
@@ -126,3 +128,8 @@ class Calculs(object):
     
     
 
+=======
+        #Ensuite, Choisir aléatoirement $k$ points,  ces points sont les centres des clusters (appelés aussi centroïd), puis on répète :  
+        #1. Affecter chaque point (ligne de  la matrice de données) au groupe dont il est le plus proche (de son centre).  
+        #2. Recalculer le centre de chaque cluster et modifier le centroide. On prendra simplement la moyenne des points du cluster.
+>>>>>>> 12490a65a3db1f486fc6a83c106e6e180b570fb3
