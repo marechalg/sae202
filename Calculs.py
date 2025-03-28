@@ -1,9 +1,8 @@
 from math import *
 from matplotlib import pylab as plt
 import numpy as np
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.cluster import KMeans
-
+# from sklearn.preprocessing import MinMaxScaler
+# from sklearn.cluster import KMeans
 
 letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
@@ -71,9 +70,9 @@ class Calculs(object):
         plt.figure('Distances entre A et B')
         col = np.array(list(col.items()))
         plt.clf()
-        plt.plot(col)
+        plt.plot(col, color='blue', marker='o', linestyle='None')
         plt.ylabel('Distance')
-        plt.xlabel(r'$\gamma_c$')
+        plt.xlabel('Classement')
         plt.savefig('mafig.pdf')
 
     def normaliser(self, val):
@@ -81,7 +80,7 @@ class Calculs(object):
         res = scaler.fit_transform(val)
         return res
     
-    def tri(self, col = []):
+    def tri(self, col = {}):
         for i in range(len(col)):
             for j in range(len(col)):
                 if col[j + 1] < col[i + 1]:
@@ -117,3 +116,5 @@ class Calculs(object):
         plt.scatter(centroids[:, 0], centroids[:, 1], c='red', marker='x', label='Centroïdes finaux')
         plt.legend()
         plt.show()
+
+#    test très sérieux
