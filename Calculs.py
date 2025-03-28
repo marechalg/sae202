@@ -1,25 +1,22 @@
 from math import *
 from matplotlib import pylab as plt
 import numpy as np
-<<<<<<< HEAD
+
 import random
 # from sklearn.preprocessing import MinMaxScaler
 # from sklearn.cluster import KMeans
-=======
-<<<<<<< HEAD
+
+
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.cluster import KMeans
-=======
-<<<<<<< HEAD
+
+
 import random
 # from sklearn.preprocessing import MinMaxScaler
 # from sklearn.cluster import KMeans
-=======
+
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.cluster import KMeans
->>>>>>> ccd39948d1adb57f1c950abcc32ac34ba8608cf0
->>>>>>> 12490a65a3db1f486fc6a83c106e6e180b570fb3
->>>>>>> 4b9a9240cce5531a6e19ee4a3b7d0d05bbd0931c
 
 letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
@@ -105,3 +102,8 @@ class Calculs(object):
             print(mini)
         
         return col
+    
+    def kMeans(self, x, y):
+        
+        matr = 
+        
