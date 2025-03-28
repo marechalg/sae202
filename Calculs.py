@@ -1,6 +1,7 @@
 from math import *
 from matplotlib import pylab as plt
 import numpy as np
+<<<<<<< HEAD
 
 import random
 # from sklearn.preprocessing import MinMaxScaler
@@ -17,6 +18,11 @@ import random
 
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.cluster import KMeans
+=======
+import random
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.cluster import KMeans
+>>>>>>> 321c0409f32f902798b582c3ed7da014e43cc298
 
 letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
@@ -103,7 +109,16 @@ class Calculs(object):
         
         return col
     
+<<<<<<< HEAD
     def kMeans(self, x, y):
         
         matr = 
         
+=======
+      def listeToMatr(self, x, y):
+        matr = []
+        for i in range(len(x)):
+            matr.append([x[i], y[i]])
+        return matr
+    
+>>>>>>> 321c0409f32f902798b582c3ed7da014e43cc298
