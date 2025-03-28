@@ -65,7 +65,6 @@ class Calculs(object):
                 leMaxi = copycol1[i]
 
         return leMaxi
-    
 
     def toGraphe(self, col = {}):
         plt.figure('Distances entre A et B')
