@@ -81,12 +81,12 @@ class Calculs(object):
         return res
     
     def tri(self, col = {}):
-        for i in range(len(col)):
-            for j in range(len(col)):
-                if col[j + 1] < col[i + 1]:
+        for i in range(1, len(col)):
+            for j in range(1, len(col)):
+                if col[j] < col[i]:
                     temp = col[i + 1]
-                    col[j + 1] = col[i + 1]
-                    col[i + 1] = temp
+                    col[j] = col[i]
+                    col[i] = temp
         return col
     
     def kMeans(self, col = {}):
