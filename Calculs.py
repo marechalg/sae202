@@ -1,8 +1,8 @@
 from math import *
 from matplotlib import pylab as plt
 import numpy as np
-# from sklearn.preprocessing import MinMaxScaler
-# from sklearn.cluster import KMeans
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.cluster import KMeans
 
 letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
@@ -81,12 +81,12 @@ class Calculs(object):
         return res
     
     def tri(self, col = {}):
-        for i in range(len(col)):
-            for j in range(len(col)):
+        for i in range(1,len(col)):
+            for j in range(1,len(col)):
                 if col[j] < col[i]:
-                    temp = col[i + 1]
-                    col[j + 1] = col[i + 1]
-                    col[i + 1] = temp
+                    temp = col[i]
+                    col[j] = col[i]
+                    col[i] = temp
         return col
     
     def kMeans(self, col = {}):
@@ -116,4 +116,13 @@ class Calculs(object):
         plt.scatter(centroids[:, 0], centroids[:, 1], c='red', marker='x', label='Centroïdes finaux')
         plt.legend()
         plt.show()
+
+
+    def listeToMatr(self, x, y):
+        matr = []
+        for i in range(len(x)):
+            matr.append([x[i], y[i]])
+        return matr
+    
+    
 
