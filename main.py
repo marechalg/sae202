@@ -9,7 +9,6 @@ B = []
 col = {}
 
 print(sep)
-typ = input("Régression ou Classification [R / C] : ").upper()
 dim = int(input("\nDimension [1 - 26] : "))
 for i in range(int(dim)):
     A.append(int(input("X : ")))
@@ -23,10 +22,11 @@ else:
     c.Chebyshev(A, B, col)
 
 print(col)
-c.tri(col)
+col = c.tri(col)
 print(col)
 c.toGraphe(col)
 
+typ = input("Régression ou Classification [R / C] : ").upper()
 for val in col:
     print(val, ": ", col[val])
 if typ == 'R':
