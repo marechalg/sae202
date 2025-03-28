@@ -117,3 +117,5 @@ class Calculs(object):
         plt.scatter(centroids[:, 0], centroids[:, 1], c='red', marker='x', label='Centroïdes finaux')
         plt.legend()
         plt.show()
+
+#    test très sérieux
