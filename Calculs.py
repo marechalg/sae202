@@ -5,8 +5,6 @@ import random
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.cluster import KMeans
 
-letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-
 class Calculs(object):
     def Minkowski(self, A, B, p = 3):
         res = 0
